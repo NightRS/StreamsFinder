@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>Go say hi to one of these streamers:</h2>
+{% for r in results %}
+    <p><a href="{{ r['link'] }}">{{ r['link'] }}</a></p>
+    <p>viewers: {{ r['viewer_count'] }}</p>
+    <p>title: {{ r['title'] }} </p>
+    <br>
+{% endfor %}
+<h2>Start a conversation in chat with this beautiful copypasta:</h2>
+<p>{{ pasta | safe }} </p>
+Credit: <a href="{{ pasta_cr }}">link</a>
+<h2>Or use this pun, picked by our developer just for you:</h2>
+<p>{{ joke }} </p>
+Credit: <a href="{{ joke_cr }}">link</a>
+</body>
+</html>

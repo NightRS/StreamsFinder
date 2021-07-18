@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% for elem in results %}
+    <p><img style="vertical-align:middle" alt="{{ elem['name'] }}" height="180" width="130" src="{{ elem['box_art_url'] }}"> {{ elem['name'] }} </p>
+{% endfor %}
+</body>
+</html>
